@@ -4,18 +4,10 @@
 }
 
 body {
-    background-color: steelblue;
     text-align: center;
 }
-.images {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 img {
-    width: 40%;
-    height: 40%;
-    margin: 20px;
-    padding: 20px;
+    height: 80%;
+    width: 80%;
 }
