@@ -19,12 +19,44 @@ app.get('/cats', function(req, res) {
     res.render('cats');
 })
 
-app.get('cars/new', function(req, res) {
+app.get('/cars/new', function(req, res) {
     res.render('newcar');
 })
 
-
-
+app.get('/cats/:cat_id', function(req, res) {
+    var id = req.params.cat_id
+    var imgString = "../images/cat" + id + ".jpg"
+    var cat_data = [
+        {
+            name: "Buttons", 
+            age: 2,
+            favoriteFood: "paint chips",
+            favoriteToys: ["mouse", "string", "ball"]
+        },
+        {
+            name: "Sockets",
+            age: 10,
+            favoriteFood: "Lasagna",
+            favoriteToys: ["your shoes", "your chair"]
+        },
+        {
+            name: "Bootstrap",
+            age: 4,
+            favoriteFood: "Catnip",
+            favoriteToys: ["catnip", "catnip", "catnip", "more catnip"]
+        },
+        {
+            name: "Session.Flush()",
+            age: 6,
+            favoriteFood: "User Ids",
+            favoriteToys: ["users", "registrations", "validations"]
+        }
+    ]
+    res.render('details', {cats : cat_data, id, imgString});
+})
+app.get("/test/:id", function (req, res) {
+    res.send(`id is ${req.params.id}`)
+})
 
 app.get("/users", function (req, res){
     var users_array = [

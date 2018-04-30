@@ -8,6 +8,12 @@ body {
 }
 
 img {
-    height: 80%;
     width: 80%;
+    height: auto;
+    border-radius: 50%;
+}
+#img_details {
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
 }
